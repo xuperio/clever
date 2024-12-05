@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerSchool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Dark background */
+            overflow: hidden;
+            color: white;
+            position: relative;
+            padding: 10px;
+        }
+
+        /* Starry background */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 1.5s infinite ease-in-out;
+        }
+
+        /* Animation for twinkling stars */
+        @keyframes twinkle {
+            0% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        /* Shooting star animation */
+        @keyframes shootStar {
+            0% {
+                transform: translateX(0) translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(300px) translateY(300px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        .shooting-star {
+            position: absolute;
+            background-color: #fff;
+            width: 3px;
+            height: 15px;
+            border-radius: 50%;
+            animation: shootStar 2s linear forwards;
+        }
+
+        .button-container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the button container */
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            gap: 8px;
+            max-width: 90%;
+            justify-content: center;
+            overflow-y: auto;
+            height: 80vh;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px; /* Smaller font size */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            max-width: 200px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button onclick="window.location.href='https://sites.google.com/site/thegamecompilation/home'">why is hitler dead</button>
+        <button onclick="window.location.href='https://sites.google.com/view/unblocked-games-76-new/home'">clever</button>
+        <button onclick="window.location.href='https://sites.google.com/view/hidden-link-classroom/retro-bowl'">powerschool</button>
+        <button onclick="window.location.href='https://nimbuss.cloud/'">Niggers need to die</button>
+        <button onclick="window.location.href='https://mathlearningcenter.design/'">gta 6</button>
+        <button onclick="window.location.href='https://math-solver.com/'">jk you fat bitch</button>
+        <button onclick="window.location.href='https://algebraxyz.info/'">i hate blacks</button>
+        <button onclick="window.location.href='https://algebraxyz.com/'">why am i doing this</button>
+        <button onclick="window.location.href='https://algebraxyz.online/'">i love my dad</button>
+        <button onclick="window.location.href='https://math-solver.info/'">kys</button>
+        <button onclick="window.location.href='https://recycleright.pro/'">xuperio</button>
+        <button onclick="window.location.href='https://educational-math-games.app/'">or</button>
+        <button onclick="window.location.href='https://roundrockisd.online/'">adapt001</button>
+        <button onclick="window.location.href='https://gointerstellar.xyz/'">yo mama taste like chicken</button>
+        <button onclick="window.location.href='https://why.math-solver.com/'">i like hitler</button>
+        <button onclick="window.location.href='https://shot.photography.backriverphotography.com/'">hitler</button>
+        <button onclick="window.location.href='https://our-history.guild-site.com/'">i hate coding sometimes</button>
+        <button onclick="window.location.href='https://solutions.abatek.com/'">i love my girl</button>
+        <button onclick="window.location.href='https://recipe.cooking.youramys.com/'">i be loving on my girl</button>
+        <button onclick="window.location.href='https://education.sciencevictory.org/'">when my girl gives me hugs and shit</button>
+        <button onclick="window.location.href='https://world-news.inthepress.org/'">awhh yes</button>
+        <button onclick="window.location.href='https://technology.linuxd1.com/'">theses are unblocked games btw</button>
+        <button onclick="window.location.href='https://earth.skytourtw.com/'">its all shit</button>
+        <button onclick="window.location.href='https://educational.naming-schemes.org/'">all these unblcoked sites work</button>
+        <button onclick="window.location.href='https://geographytips.org/'">yall gotta learn how to code</button>
+        <button onclick="window.location.href='https://coaching.garmanage.com/'">yes</button>
+        <button onclick="window.location.href='https://electronics.open-autonomy.com/'">yes</button>
+        <button onclick="window.location.href='https://recycling.shekinahphotography.com/'">c++ on top</button>
+        <button onclick="window.location.href='https://about-us.nuggetgarage.com/'">im almost done yay</button>
+        <button onclick="window.location.href='https://education.sciencevictory.org/'">done</button>
+    </div>
+
+    <div class="stars"></div>
+
+    <script>
+        // Create random stars in the background
+        const starField = document.querySelector('.stars');
+
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            const size = Math.random() * 3 + 1;  // Random star size between 1 and 3px
+            const x = Math.random() * window.innerWidth;  // Random horizontal position
+            const y = Math.random() * window.innerHeight; // Random vertical position
+            star.classList.add('star');
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${x}px`;
+            star.style.top = `${y}px`;
+
+            starField.appendChild(star);
+        }
+
+        // Function to create a shooting star
+        function createShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.classList.add('shooting-star');
+
+            // Random position for the shooting star to start from
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight / 2; // Top half of the screen
+            shootingStar.style.left = `${startX}px`;
+            shootingStar.style.top = `${startY}px`;
+
+            // Append the shooting star to the body
+            document.body.appendChild(shootingStar);
+
+            // Remove the shooting star after animation
+            setTimeout(() => {
+                shootingStar.remove();
+            }, 2000); // Matches the duration of the animation
+        }
+
+        // Create a new shooting star every 10 seconds
+        setInterval(createShootingStar, 10000);
+    </script>
+ 
+</body>
+</html>
